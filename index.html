@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mini Kart</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header class="header">
+    <img src="./docs/header.gif" alt="header">
+    <h1>Mini Kart</h1>
+  </header>
+
+  <main class="wrap">
+    <canvas id="game" width="960" height="600"></canvas>
+
+    <aside class="hud">
+      <div class="row">
+        <div class="card">
+          <img src="./docs/mario.gif" class="avatar" alt="Mario">
+          <div>
+            <div class="name">Mario (WASD)</div>
+            <div>Volta: <span id="lap-p1">1</span>/3</div>
+            <div>Vel.: <span id="spd-p1">0</span></div>
+            <div>Pos.: <span id="pos-p1">1º</span></div>
+            <div>Item: <span id="item-p1">—</span></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./docs/luigi.gif" class="avatar" alt="Luigi">
+          <div>
+            <div class="name">Luigi (Setas)</div>
+            <div>Volta: <span id="lap-p2">1</span>/3</div>
+            <div>Vel.: <span id="spd-p2">0</span></div>
+            <div>Pos.: <span id="pos-p2">2º</span></div>
+            <div>Item: <span id="item-p2">—</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="start">Iniciar</button>
+        <label class="checkbox">
+          <input type="checkbox" id="ai" checked>
+          Luigi como IA
+        </label>
+      </div>
+
+      <div class="legend">
+        <p><strong>Controles:</strong></p>
+        <p>Mario: W/A/S/D — Item: Shift</p>
+        <p>Luigi: ↑/↓/←/→ — Item: Enter</p>
+      </div>
+    </aside>
+  </main>
+
+  <div id="banner" class="banner hidden"></div>
+
+  <script src="./src/index.js"></script>
+</body>
+</html>
